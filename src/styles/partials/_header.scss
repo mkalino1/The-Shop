@@ -1,0 +1,141 @@
+.header {
+    width: 100vw;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../assets/hasui.jpg');
+    background-position: center;
+    background-size: cover;
+
+    @media #{$md} {
+      height: 40vw;
+    }
+
+    @media #{$lg} {
+      height: 60vh;
+    }
+
+    &__title {
+      color: #e4caca;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 0 0 12px black;
+      font-size: 40px;
+      letter-spacing: 1.6vw;
+      
+      margin: 0;
+      margin-top: 10vh;
+      transition: margin-top .3s .3s ease-in-out;
+
+      @media #{$sm} {
+        font-size: 60px;
+      }
+
+      @media #{$md} {
+        font-size: 80px;
+      }
+
+      @media #{$lg} {
+        font-size: 120px;
+      }
+  
+      &--active {
+        transition: margin-top .3s ease-in-out;
+        margin-top: 0;
+      }
+    }
+  
+    &__navbar {
+      display: flex;
+      flex-direction: column;
+      transition: opacity .4s .3s ease-in-out;
+      opacity: 1;
+      text-shadow: 0 0 8px black;
+  
+      &--hidden {
+        transition: opacity .4s ease-in-out;
+        opacity: 0;
+      }
+
+      @media #{$lg} {
+        position: absolute;
+        flex-direction: row;
+        top: 40px;
+        left: 40px;
+      }
+    }
+      
+    &__link {
+      color: #e4caca;
+      padding: 0;
+      margin: 4px 8px;
+      font-size: 24px;
+      text-decoration: none;
+      text-shadow: 0 0 8px black;
+
+      &:hover {
+        text-decoration: underline;
+        filter: brightness(120%);
+      }
+    }
+  
+    &__toggler {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 35px;
+      height: 35px;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      border: 2px solid #ca9797;
+      border-radius: 5px;
+
+      background-color: #eddbdb;
+      box-shadow: 0 0 8px 1px black;
+
+      &:focus {
+        outline: none;
+      }
+
+      // @media #{$lg} {
+      //   display: none;
+      // }
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(110%);
+        //background-color: darken($color: inherit, $amount: 40);
+      }
+  
+      & span {
+        display: block;
+        height: 4px;
+        width: 22px;
+        background-color: #ca9797;
+        border-radius: 2px;
+        transition: transform .2s , opacity .3s .2s;
+      }
+  
+      //Modyfier '--active' is changing the style of inner spans
+      &--active span{
+        transition: transform .2s  .3s, opacity .3s;
+        &:nth-child(1){
+          transform: translateY(9.4px) rotate(45deg);
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          transform: translateY(-9.4px) rotate(-45deg);
+        }
+      }
+    }
+  }

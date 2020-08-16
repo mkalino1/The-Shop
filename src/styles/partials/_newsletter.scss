@@ -1,0 +1,33 @@
+.newsletter {
+    &__form {
+        padding-bottom: 1vh;
+        border-bottom: 2px solid black;
+        display: flex;
+        justify-content: space-around;;
+    }
+
+    &__spam {
+        font-size: 12px;
+    }
+    &__email {
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: inherit;
+
+        &::placeholder {
+            color: grey;
+        }
+    }
+
+    &__submit {
+        outline: none;
+        border: none;
+        background-color: inherit;
+
+        &:hover {
+            text-shadow: 0 0 4px grey;
+            cursor: pointer;
+        }
+    }
+}

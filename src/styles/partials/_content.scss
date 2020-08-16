@@ -1,0 +1,17 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.content-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8vh;
+    width: 100vw;
+
+    &__title  {
+        letter-spacing: 3px;
+    }
+  }

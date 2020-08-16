@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Red Hat Display";
+  src: url('../assets/fonts/RedHatDisplay-Regular.ttf');
+}
+
+@import 'partials/breakpoints.scss';
+@import 'partials/header.scss';
+@import 'partials/content.scss';
+@import 'partials/carousel.scss';
+@import 'partials/arrivals-section.scss';
+@import 'partials/sales-section.scss';
+@import 'partials/scroll-arrow.scss';
+@import 'partials/newsletter.scss';
+@import 'partials/footer.scss';
+
+
+body {
+  background-color: #f5ecec;
+  color: black;
+  font-family: "Red Hat Display", Arial;
+  margin: 0;
+}

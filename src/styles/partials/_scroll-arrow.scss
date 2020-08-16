@@ -1,0 +1,28 @@
+.scroll-arrow {
+    position: fixed;
+    bottom: 12vh;
+    right: 8vw;
+    visibility: hidden;
+  
+    width: 34px;
+    height: 34px;
+    background-color: papayawhip;
+    border: 0 solid papayawhip; //wheat
+    border-radius: 17px;
+    font-size: 18px;
+    font-weight: bolder;
+    box-shadow: 0 0 10px 1px grey;
+  
+    &:hover {
+      background-color: whitesmoke;
+      cursor: pointer;
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    &--visible {
+      visibility: visible;
+    }
+  }

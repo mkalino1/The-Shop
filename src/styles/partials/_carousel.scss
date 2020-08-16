@@ -1,0 +1,78 @@
+.carousel-section {
+    background-color: blanchedalmond;
+    padding-bottom: 40px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &__button {
+        width: 40px;
+        height: 40px;
+        background-color: lightseagreen;
+        cursor: pointer;
+        border: 0 solid black;
+        border-radius: 20px;
+        flex-shrink: 0;
+        outline: none;
+        margin: 8px;
+
+        display: none;
+
+        @media #{$sm} {
+            display: block;
+        }
+
+        &--prev {
+            margin-left: 16px;
+        }
+
+        &--next {
+            margin-right: 16px;
+        }
+
+        &:hover {
+            filter: brightness(120%);
+        }
+    }
+}
+
+.carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    background-color: burlywood;
+    margin: 0;
+
+    &__content {
+        flex-shrink: 1;
+        display: flex;
+        & figure {
+            width: 400px;
+        }
+    }
+
+    &__item {
+        margin: 6px;
+        text-align: center; //TODO more
+    }
+
+    &::-webkit-scrollbar {
+        height: 4px;
+        &-thumb {
+            background-color: rebeccapurple;;
+            width: 100px; 
+            border-radius: 2px;
+        }
+    }
+
+    // Hiding scroll bar
+    @media #{$sm} {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
