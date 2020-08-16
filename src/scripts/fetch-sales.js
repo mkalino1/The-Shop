@@ -16,6 +16,7 @@ export default function() {
 
         for (let img of imgs){
             img.children[0].src = "https://" + sources[i].imageUrl;
+            img.children[1].innerHTML = sources[i].name;
             i++;
         }
     });

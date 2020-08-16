@@ -1,6 +1,6 @@
 .carousel-section {
     background-color: blanchedalmond;
-    padding-bottom: 40px;
+    padding: 20px 0;
 }
 
 .carousel-wrapper {
@@ -42,20 +42,29 @@
 .carousel {
     overflow: auto;
     scroll-behavior: smooth;
-    background-color: burlywood;
+    background-color: indianred;
     margin: 0;
 
     &__content {
         flex-shrink: 1;
         display: flex;
-        & figure {
-            width: 400px;
-        }
+        gap: 10px;
     }
 
     &__item {
-        margin: 6px;
+        position: relative;
+        margin: 0;
         text-align: center; //TODO more
+        font-size: 12px;
+
+        & figcaption {
+            background-color:rgba($color: #111, $alpha: 0.6);
+            color: white;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 93.6%;
+        }
     }
 
     &::-webkit-scrollbar {
