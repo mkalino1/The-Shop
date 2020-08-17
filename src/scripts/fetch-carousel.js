@@ -1,7 +1,5 @@
 export default function() {
-    const imgs = document.querySelectorAll('.carousel__item');
-
-    fetch("https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4208&limit=48&store=US", {
+    return fetch("https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4208&limit=8&store=US", {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "asos2.p.rapidapi.com",
@@ -9,17 +7,7 @@ export default function() {
         }
     })
     .then(res => res.json())
-    .then(data => { 
-        let sources = data.products;
-        let i =0;
-        i=0;
-
-        for (let img of imgs){
-            img.children[0].src = "https://" + sources[i].imageUrl;
-            img.children[1].innerHTML = sources[i].name;
-            i++;
-        }
-    })
+    .then(data => data.products)
     .catch(err => {
         console.log(err);
     });

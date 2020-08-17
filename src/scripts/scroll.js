@@ -15,7 +15,8 @@ export default function() {
         window.scrollTo({top: 0, behavior: 'smooth'});
     });
 
-
+    
+    /*Smooth nav autoscroll*/
     const arrivalsLink = document.querySelector('.header__link--arrivals');
     const salesLink = document.querySelector('.header__link--sales');
     const newsletterLink = document.querySelector('.header__link--newsletter');

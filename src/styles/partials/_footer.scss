@@ -28,19 +28,21 @@
 
     &__item {
         margin: 0 2vw;
-
         font-size: 12px;
         font-weight: bold;
-
         cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
         &:hover {
-            text-shadow: 0 0 8px grey;
+            text-shadow: 0 0 8px lightgrey;
+            transform: scale(1.2);
         }
 
         &--unclickable {
             cursor: default;
             &:hover {
                 text-shadow: none;
+                transform: none;
             }
         }
     }

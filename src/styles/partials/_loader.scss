@@ -11,6 +11,10 @@
     border: 1px dotted gray;
     min-height: 250px;
 
+    &--hidden{
+        display: none;
+    }
+
     &__text {
         letter-spacing: 3px;
         text-align: center;
