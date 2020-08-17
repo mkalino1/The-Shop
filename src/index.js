@@ -1,7 +1,7 @@
 import './styles/style.scss'
 
 import hamburger from './scripts/hamburger'
-import scrollArrow from './scripts/scroll-arrow'
+import scrollArrow from './scripts/scroll'
 import carousel from './scripts/carousel'
 import fetchArrivals from './scripts/fetch-arrivals'
 import fetchCarousel from './scripts/fetch-carousel'

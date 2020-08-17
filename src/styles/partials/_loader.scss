@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     border: 1px dotted gray;
+    min-height: 250px;
 
     &__text {
         letter-spacing: 3px;
@@ -19,7 +20,6 @@
     &__box {
         width: 80px;
         height: 80px;
-        //background-color: steelblue;
 
         animation-duration: 2s;
         animation-timing-function: linear;
