@@ -1,6 +1,8 @@
 .header {
     width: 100vw;
     height: 30vh;
+    @media #{$md} {height: 40vw;}
+    @media #{$lg} {height: 60vh;}
 
     display: flex;
     flex-direction: column;
@@ -11,38 +13,25 @@
     background-position: center;
     background-size: cover;
 
-    @media #{$md} {
-      height: 40vw;
-    }
-
-    @media #{$lg} {
-      height: 60vh;
-    }
-
     &__title {
       color: #e4caca;
       text-transform: uppercase;
-      text-align: center;
       text-shadow: 0 0 12px black;
-      font-size: 40px;
       letter-spacing: 1.6vw;
-      
+
+      font-size: 40px;
+      @media #{$sm} {font-size: 60px;}
+      @media #{$md} {font-size: 80px;}
+      @media #{$lg} {font-size: 120px;}
+
+      //text-align: center;
+
+      //hmmmm
       margin: 0;
       margin-top: 10vh;
+
       transition: margin-top .3s .3s ease-in-out;
 
-      @media #{$sm} {
-        font-size: 60px;
-      }
-
-      @media #{$md} {
-        font-size: 80px;
-      }
-
-      @media #{$lg} {
-        font-size: 120px;
-      }
-  
       &--active {
         transition: margin-top .3s ease-in-out;
         margin-top: 0;
@@ -52,9 +41,10 @@
     &__navbar {
       display: flex;
       flex-direction: column;
+      text-shadow: 0 0 8px black;
+
       transition: opacity .4s .3s ease-in-out;
       opacity: 1;
-      text-shadow: 0 0 8px black;
   
       &--hidden {
         transition: opacity .4s ease-in-out;
@@ -64,8 +54,9 @@
       @media #{$lg} {
         position: absolute;
         flex-direction: row;
-        top: 40px;
-        left: 40px;
+        top: 8px;
+        left: 20px;
+        opacity: 1;
       }
     }
       
@@ -105,9 +96,9 @@
         outline: none;
       }
 
-      // @media #{$lg} {
-      //   display: none;
-      // }
+      @media #{$lg} {
+        display: none;
+      }
 
       &:hover {
         cursor: pointer;
@@ -138,4 +129,17 @@
         }
       }
     }
-  }
+
+    &__icons {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+
+      & img {
+        margin: 12px 10px;
+        width: 16px;
+        filter: invert(1);
+        cursor: pointer;
+      }
+    }
+}

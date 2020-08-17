@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     hamburger();
     carousel();
     scrollArrow();
-    fetchCarousel();
-    fetchArrivals();
-    fetchSales();
+    //fetchCarousel();
+    //fetchArrivals();
+    //fetchSales();
   });

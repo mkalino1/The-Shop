@@ -53,9 +53,9 @@
 
     &__item {
         position: relative;
+        min-width: 314px;
+        min-height: 400px;
         margin: 0;
-        text-align: center; //TODO more
-        font-size: 12px;
 
         & figcaption {
             background-color:rgba($color: #111, $alpha: 0.6);
@@ -64,6 +64,8 @@
             position: absolute;
             bottom: 0;
             width: 93.6%;
+            text-align: center; //TODO more
+            font-size: 12px;
         }
     }
 

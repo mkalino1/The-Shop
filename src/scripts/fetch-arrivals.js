@@ -5,7 +5,7 @@ export default function() {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "asos2.p.rapidapi.com",
-            "x-rapidapi-key": "61074dac6emsh8f5b49cd05e94eep1a93f4jsn9b824b551a7c"
+            "x-rapidapi-key": "fab6404bfcmshd9fba50815cc7b4p1ecbacjsnbe158f9ebfd0"
         }
     })
     .then(res => res.json())
@@ -19,6 +19,9 @@ export default function() {
             img.children[1].innerHTML = sources[i].name;
             i++;
         }
+    })
+    .catch(err => {
+        console.log(err);
     });
 
 }
