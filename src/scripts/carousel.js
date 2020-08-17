@@ -4,22 +4,22 @@ import fetchData from './fetch-carousel'
   const next = document.querySelector(".carousel-wrapper__button--next");
   const prev = document.querySelector(".carousel-wrapper__button--prev");
   const carousel = document.querySelector(".carousel");
-  
-  const width = 500;
+  //const carouselContent = document.querySelector(".carousel__content");
+  //console.log(carouselContent.style);
+  const carouselItem = document.querySelector(".carousel__item");
+
+  const carouselWidth = carousel.offsetWidth;
+  const itemWidth = carouselItem.offsetWidth + 10;
+  const properScrollWidth = Math.floor(carouselWidth/itemWidth)*itemWidth;
 
   next.addEventListener("click", () => {
-    carousel.scrollBy(width, 0);
+    carousel.scrollBy(properScrollWidth, 0);
   });
   
   prev.addEventListener("click", () => {
-    carousel.scrollBy(-(width), 0);
+    carousel.scrollBy(-(properScrollWidth), 0);
   });
 }
-
-// <!-- <figure class="carousel__item">
-  // <img src="https://via.placeholder.com/314x400?text=Loading...">
-  // <figcaption>Buty</figcaption>
-// </figure> -->
 
 function createCarouselItems(data){
   const loaders = document.querySelectorAll('.carousel .loader');
