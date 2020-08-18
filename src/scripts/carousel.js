@@ -1,4 +1,4 @@
-import fetchData from './fetch-carousel'
+import fetchData from './fetch-data'
  
  function handleButtons() {
   const next = document.querySelector(".carousel-wrapper__button--next");
@@ -22,12 +22,12 @@ import fetchData from './fetch-carousel'
 }
 
 function createCarouselItems(data){
-  const loaders = document.querySelectorAll('.carousel .loader');
   const content = document.querySelector('.carousel__content');
 
   for (let element of data) {
     const carousel_item = document.createElement('figure');
     carousel_item.classList.add('carousel__item');
+
     const url = "https://" + element.imageUrl;
     carousel_item.innerHTML = 
     `
@@ -40,16 +40,17 @@ function createCarouselItems(data){
     content.appendChild(carousel_item);
   }
 
+  const loaders = document.querySelectorAll('.carousel .loader');
   for (let loader of loaders){
     loader.classList.add('loader--hidden');
   }
 }
 
 function launchCarousel(){
-  fetchData().then( data => createCarouselItems(data));
+  fetchData(4208, 8).then( data => createCarouselItems(data));
 }
 
 export default function() {
-  //launchCarousel();
+  launchCarousel();
   handleButtons();
 }

@@ -29,6 +29,7 @@
         position: relative;
         & img {
             width: 100%;
+            transition: filter .2s ease-in-out;
         }
 
         & figcaption {
@@ -37,6 +38,10 @@
             font-size: 12px;
             text-align: center;
             width: 100%;
+        }
+
+        &:hover img{
+            filter: blur(5px);
         }
     }
 

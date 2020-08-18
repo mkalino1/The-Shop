@@ -21,18 +21,18 @@ export default function() {
     const salesLink = document.querySelector('.header__link--sales');
     const newsletterLink = document.querySelector('.header__link--newsletter');
 
-    const arrivals = document.querySelector('.arrivals')
-    const sales = document.querySelector('.sales')
-    const newsletter = document.querySelector('.newsletter')
+    const arrivals = document.querySelector('.arrivals');
+    const sales = document.querySelector('.sales');
+    const newsletter = document.querySelector('.newsletter');
 
     arrivalsLink.addEventListener('click', () => {
       arrivals.scrollIntoView({behavior: "smooth"});
-    })
+    });
     salesLink.addEventListener('click', () => {
       sales.scrollIntoView({behavior: "smooth"});
-    })
+    });
     newsletterLink.addEventListener('click', () => {
       newsletter.scrollIntoView({behavior: "smooth"});
-    })
+    });
      
 }

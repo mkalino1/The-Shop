@@ -13,14 +13,19 @@
     &__fig {
       margin: 0;
       padding: 4px;
-  
+
       & img {
         width: 100%;
+        transition: filter .2s ease-in-out;
       }
 
       & figcaption {
         font-size: 14px;
         text-align: center;
+      }
+
+      &:hover img {
+        filter: drop-shadow(0 0 16px lightpink);
       }
     }
   }

@@ -56,6 +56,7 @@
         min-width: 314px;
         min-height: 400px;
         margin: 0;
+        overflow: hidden;
 
         & figcaption {
             background-color:rgba($color: #111, $alpha: 0.6);
@@ -66,10 +67,19 @@
             width: 93.6%;
             text-align: center; //TODO more
             font-size: 12px;
+            min-height: 50px;
         }
 
         & p {
             margin: 4px 0;
+        }
+
+        & img {   
+            transition: transform .2s ease-in-out;
+        }
+
+        &:hover img{
+            transform: scale(1.25);
         }
     }
 

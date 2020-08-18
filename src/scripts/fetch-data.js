@@ -1,5 +1,5 @@
-export default function() {
-    return fetch("https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4208&limit=8&store=US", {
+export default function(categoryId, limit) {
+    return fetch(`https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=${categoryId}&limit=${limit}&store=US`, {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "asos2.p.rapidapi.com",
