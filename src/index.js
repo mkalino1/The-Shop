@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     hamburger();
     scrollArrow();
 
-    // carousel();
-    // arrivals();
-    // sales();
+    carousel();
+    //arrivals();
+    //sales();
   });

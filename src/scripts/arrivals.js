@@ -2,9 +2,6 @@ import fetchData from './fetch-data'
 
 function createArrivalsItems(data){
   const content = document.querySelector('.arrivals__container');
-  while (content.firstChild) {
-    content.removeChild(content.lastChild);
-  }
 
   for (let element of data) {
     const carousel_item = document.createElement('figure');
@@ -20,6 +17,11 @@ function createArrivalsItems(data){
       </figcaption> 
     `;
     content.appendChild(carousel_item);
+  }
+
+  const loaders = document.querySelectorAll('.arrivals .loader');
+  for (let loader of loaders){
+    loader.classList.add('loader--hidden');
   }
 }
 
