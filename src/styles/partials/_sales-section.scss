@@ -1,4 +1,5 @@
 .sales {
+    //background-color: lighten($color: $light-violet, $amount: 22220);
     background-color: lightpink;
     padding: 2vw 3vw;
 
@@ -41,7 +42,7 @@
         }
 
         &:hover img{
-            filter: blur(5px);
+            filter: drop-shadow(0 0 16px grey);
         }
     }
 

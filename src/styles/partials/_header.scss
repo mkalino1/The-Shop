@@ -1,5 +1,5 @@
 .header {
-    width: 100vw;
+    width: 100%;
     height: 30vh;
     @media #{$md} {height: 40vw;}
     @media #{$lg} {height: 60vh;}
@@ -9,14 +9,15 @@
     align-items: center;
     justify-content: center;
 
-    background-image: url('../assets/hasui.jpg');
+    background-image: url('../assets/concrete.jpg');
     background-position: center;
     background-size: cover;
 
     &__title {
-      color: #e4caca;
+      color: lightpink;
+      // color: darken($color: lightseagreen, $amount: 15%);
       text-transform: uppercase;
-      text-shadow: 0 0 12px black;
+      text-shadow: 0 0 10px gray;
       letter-spacing: 1.6vw;
 
       font-size: 40px;
@@ -41,7 +42,7 @@
     &__navbar {
       display: flex;
       flex-direction: column;
-      text-shadow: 0 0 8px black;
+      //text-shadow: 0 0 8px black;
 
       transition: opacity .4s .3s ease-in-out;
       opacity: 1;
@@ -61,12 +62,13 @@
     }
       
     &__link {
-      color: #e4caca;
+      //color: #e4caca;
+      //color: lightseagreen;
       padding: 0;
       margin: 4px 14px;
       font-size: 24px;
       text-decoration: none;
-      text-shadow: 0 0 8px black;
+      text-shadow: 0 0 3px grey;
       cursor: pointer;
 
       &:hover {
@@ -139,7 +141,6 @@
       & img {
         margin: 12px 10px;
         width: 20px;
-        filter: invert(1);
         cursor: pointer;
         transition: transform .1s ease-in-out;
 

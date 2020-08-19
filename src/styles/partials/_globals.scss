@@ -1,0 +1,15 @@
+$dark-violet: rgb(116, 196, 192);
+$light-violet: lightseagreen;
+
+@font-face {
+    font-family: "Red Hat Display";
+    src: url('../assets/fonts/RedHatDisplay-Regular.ttf');
+}
+
+body {
+    background-color: #f5ecec;
+    color: black;
+    font-family: "Red Hat Display", Arial;
+    margin: 0;
+  }
+  

@@ -1,5 +1,5 @@
 .carousel-section {
-    background-color: blanchedalmond;
+    background-color: $dark-violet;
     padding: 20px 0;
 }
 
@@ -42,7 +42,7 @@
 .carousel {
     overflow: auto;
     scroll-behavior: smooth;
-    background-color: indianred;
+    background-color:  $light-violet;
     margin: 0;
 
     &__content {

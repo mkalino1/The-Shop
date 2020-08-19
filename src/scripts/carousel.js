@@ -58,7 +58,7 @@ function handleResizing() {
 }
 
 export default function() {
-  //launchCarousel();
+  launchCarousel();
   handleButtons();
   handleResizing();
 }
