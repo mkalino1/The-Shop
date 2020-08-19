@@ -1,8 +1,8 @@
 .header {
     width: 100%;
-    height: 30vh;
-    @media #{$md} {height: 40vw;}
-    @media #{$lg} {height: 60vh;}
+    height: 80vw;
+    @media #{$sm} {height: 60vw;}
+    @media #{$lg} {height: 40vw;}
 
     display: flex;
     flex-direction: column;
@@ -15,44 +15,50 @@
 
     &__title {
       color: lightpink;
-      // color: darken($color: lightseagreen, $amount: 15%);
       text-transform: uppercase;
       text-shadow: 0 0 10px gray;
       letter-spacing: 1.6vw;
 
-      font-size: 40px;
-      @media #{$sm} {font-size: 60px;}
-      @media #{$md} {font-size: 80px;}
-      @media #{$lg} {font-size: 120px;}
-
-      //text-align: center;
-
-      //hmmmm
-      margin: 0;
-      margin-top: 10vh;
+      font-size: 12vw;
+      @media #{$lg} {font-size: 10vw;}
 
       transition: margin-top .3s .3s ease-in-out;
+      /* Title movement for smaller screens */
+      margin: 30vw 0 0 0;
+      @media #{$sm} {margin: 12vw 0 0 0;}
 
       &--active {
         transition: margin-top .3s ease-in-out;
-        margin-top: 0;
+
+        margin: 7vw 0 0 0;
+        @media #{$sm} {margin: 2vw 0 0 0;}
       }
+
+      /* Title movement for larger screens */
+      @media #{$lg} {
+        margin: 0;
+        transition: none;
+      }
+
     }
   
     &__navbar {
       display: flex;
       flex-direction: column;
-      //text-shadow: 0 0 8px black;
 
-      transition: opacity .4s .3s ease-in-out;
+      transition: visibility 0s linear .3s, opacity .3s .3s ease-in-out;
       opacity: 1;
+      visibility: visible;
   
       &--hidden {
-        transition: opacity .4s ease-in-out;
+        transition: visibility 0s linear .3s, opacity .3s ease-in-out;
+        //transition: opacity .4s ease-in-out;
         opacity: 0;
+        visibility: hidden;
       }
 
       @media #{$lg} {
+        visibility: visible;
         position: absolute;
         flex-direction: row;
         top: 8px;
@@ -67,6 +73,7 @@
       padding: 0;
       margin: 4px 14px;
       font-size: 24px;
+      @media #{$md} {font-size: 32px;}
       text-decoration: none;
       text-shadow: 0 0 3px grey;
       cursor: pointer;
