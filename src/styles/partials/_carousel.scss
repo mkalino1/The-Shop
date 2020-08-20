@@ -1,5 +1,5 @@
 .carousel-section {
-    background-color: $dark-violet;
+    background-color: $light-main;
     padding: 20px 0;
 }
 
@@ -11,7 +11,7 @@
     &__button {
         width: 40px;
         height: 40px;
-        background-color: lightseagreen;
+        background-color: $main;
         cursor: pointer;
         border: 0 solid black;
         border-radius: 20px;
@@ -42,7 +42,7 @@
 .carousel {
     overflow: auto;
     scroll-behavior: smooth;
-    background-color:  $light-violet;
+    background-color: $main;
     margin: 0;
 
     &__content {
@@ -65,7 +65,7 @@
             position: absolute;
             bottom: 0;
             width: 93.6%;
-            text-align: center; //TODO more
+            text-align: center;
             font-size: 12px;
             min-height: 50px;
         }

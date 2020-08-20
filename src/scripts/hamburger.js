@@ -4,7 +4,7 @@ export default function() {
     let title = document.querySelector(".header__title");
   
     toggler.addEventListener("click", () => {
-      navbar.classList.toggle("header__navbar--hidden");
+      navbar.classList.toggle("header__navbar--visible");
       toggler.classList.toggle("header__hamburger--active");
       title.classList.toggle("header__title--active");
     })

@@ -30,17 +30,15 @@ function handleLoadingMore() {
   const button = document.querySelector('.arrivals__more-button');
   let counter = 0;
   button.addEventListener('click', () => {
+      counter ++;
+      fetchData(8799, 12, counter*12).then( data => createArrivalsItems(data));
       if (counter <3){
-          counter ++;
-          fetchData(4209, 12, counter*12).then( data => createArrivalsItems(data));
-      }
-      else {
-          button.style.display = 'none';
+        button.style.display = 'none';
       }
   });
 }
 
 export default function() {
-    fetchData(4209, 12).then( data => createArrivalsItems(data));
+    fetchData(8799, 12).then( data => createArrivalsItems(data));
     handleLoadingMore();
 }

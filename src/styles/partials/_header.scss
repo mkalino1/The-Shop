@@ -22,8 +22,8 @@
       font-size: 12vw;
       @media #{$lg} {font-size: 10vw;}
 
-      transition: margin-top .3s .3s ease-in-out;
       /* Title movement for smaller screens */
+      transition: margin-top .3s .3s ease-in-out;
       margin: 25vw 0 0 0;
       @media #{$sm} {margin: 12vw 0 0 0;}
 
@@ -46,15 +46,14 @@
       display: flex;
       flex-direction: column;
 
-      transition: visibility 0s linear .3s, opacity .3s .3s ease-in-out;
-      opacity: 1;
-      visibility: visible;
-  
-      &--hidden {
-        transition: visibility 0s linear .3s, opacity .3s ease-in-out;
-        //transition: opacity .4s ease-in-out;
-        opacity: 0;
-        visibility: hidden;
+      transition: visibility 0s linear .3s, opacity .3s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+      
+      &--visible {
+        transition: visibility 0s linear .3s, opacity .3s .3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
       }
 
       @media #{$lg} {
@@ -68,12 +67,11 @@
     }
       
     &__link {
-      //color: #e4caca;
-      //color: lightseagreen;
       padding: 0;
       margin: 4px 14px;
       font-size: 24px;
       @media #{$md} {font-size: 32px;}
+      
       text-decoration: none;
       text-shadow: 0 0 3px grey;
       cursor: pointer;
