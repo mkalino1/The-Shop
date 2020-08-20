@@ -32,7 +32,7 @@ function handleLoadingMore() {
   button.addEventListener('click', () => {
       counter ++;
       fetchData(8799, 12, counter*12).then( data => createArrivalsItems(data));
-      if (counter <3){
+      if (counter >= 3){
         button.style.display = 'none';
       }
   });
