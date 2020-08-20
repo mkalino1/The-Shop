@@ -47,7 +47,7 @@ function createCarouselItems(data){
 }
 
 function launchCarousel(){
-  fetchData(28945, 8).then( data => createCarouselItems(data));
+  fetchData(28945, 15).then( data => createCarouselItems(data));
 }
 
 function handleResizing() {

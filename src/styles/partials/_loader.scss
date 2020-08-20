@@ -11,6 +11,10 @@
     border: 1px dotted black;
     min-height: 250px;
 
+    &--more {
+        border: none;
+    }
+
     &--hidden{
         display: none;
     }

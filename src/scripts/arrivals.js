@@ -28,13 +28,20 @@ function createArrivalsItems(data){
 
 function handleLoadingMore() {
   const button = document.querySelector('.arrivals__more-button');
+  const loader = document.querySelector('.loader--more');
   let counter = 0;
   button.addEventListener('click', () => {
       counter ++;
-      fetchData(8799, 12, counter*12).then( data => createArrivalsItems(data));
-      if (counter >= 3){
-        button.style.display = 'none';
-      }
+      button.classList.add('arrivals__more-button--hidden');
+      loader.classList.remove('loader--hidden')
+      fetchData(8799, 12, counter*12)
+          .then( data => createArrivalsItems(data))
+          .then( () => {
+            if (counter < 3){
+              button.classList.remove('arrivals__more-button--hidden');
+            }
+            loader.classList.add('loader--hidden')
+          });
   });
 }
 
