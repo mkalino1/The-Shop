@@ -1,5 +1,5 @@
 {
-  "name": "frontend-level-up",
+  "name": "frontend-shop",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mateusz",
+  "author": "Mateusz K.",
   "license": "ISC",
   "dependencies": {
     "webpack": "^4.42.1",
@@ -25,7 +25,8 @@
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "clean-webpack-plugin": "^3.0.0"
   },
   "browserslist": [
     "defaults"

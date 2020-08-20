@@ -25,6 +25,22 @@ function createArrivalsItems(data){
   }
 }
 
+
+function handleLoadingMore() {
+  const button = document.querySelector('.arrivals__more-button');
+  let counter = 0;
+  button.addEventListener('click', () => {
+      if (counter <3){
+          counter ++;
+          fetchData(4209, 12, counter*12).then( data => createArrivalsItems(data));
+      }
+      else {
+          button.style.display = 'none';
+      }
+  });
+}
+
 export default function() {
     fetchData(4209, 12).then( data => createArrivalsItems(data));
+    handleLoadingMore();
 }
